@@ -8,6 +8,10 @@ body {
     background-color: #fafafa;
     overflow-x: hidden;
 }
+img, svg, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Glassmorphism Styles */
 .glass-card {
@@ -224,6 +228,10 @@ details[open] summary ~ * {
 
 .animate-scroll {
     animation: scroll-ticker 25s linear infinite;
+}
+
+.logo-item {
+    flex-shrink: 0;
 }
 
 @keyframes scroll-ticker {

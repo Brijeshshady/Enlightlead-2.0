@@ -7,6 +7,10 @@ body {
     background-color: #fafafa;
     overflow-x: hidden;
 }
+img, svg, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Glassmorphism Styles */
 .glass-card {

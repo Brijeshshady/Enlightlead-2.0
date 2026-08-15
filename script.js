@@ -2,7 +2,7 @@
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.05
 };
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -154,6 +154,16 @@ if (menuBtn && mobileMenu) {
             mobileMenu.classList.add('hidden');
             menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
         }
+    });
+
+    // Close menu when navigation links are clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            if (menuPath) {
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            }
+        });
     });
 }
 
@@ -455,8 +465,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentIndex > maxIndex) currentIndex = maxIndex;
             if (currentIndex < 0) currentIndex = 0;
 
-            const cardWidthPercent = 100 / perView;
-            reviewTrack.style.transform = `translateX(-${currentIndex * cardWidthPercent}%)`;
+            if (perView === 1) {
+                // On mobile, translate by card width (100%) + gap (24px)
+                reviewTrack.style.transform = `translateX(calc(-${currentIndex} * (100% + 24px)))`;
+            } else if (perView === 2) {
+                // On tablet, translate by card width (50% - 12px) + gap (24px) = 50% + 12px
+                reviewTrack.style.transform = `translateX(calc(-${currentIndex} * (50% + 12px)))`;
+            } else {
+                // On desktop, translate by card width (33.333% - 16px) + gap (24px) = 33.333% + 8px
+                reviewTrack.style.transform = `translateX(calc(-${currentIndex} * (33.333% + 8px)))`;
+            }
         }
 
         if (nextBtn) {

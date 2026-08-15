@@ -2,7 +2,7 @@
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.05
 };
 
 const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -154,5 +154,15 @@ if (menuBtn && mobileMenu) {
             mobileMenu.classList.add('hidden');
             menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
         }
+    });
+
+    // Close menu when navigation links are clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            if (menuPath) {
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            }
+        });
     });
 }

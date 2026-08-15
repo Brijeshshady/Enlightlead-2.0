@@ -1,125 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Privacy Policy - Enlightlead 2.0 SAP Training Institute</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/brand/logo.svg">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
+
 <body class="text-gray-900 antialiased relative min-h-screen flex flex-col justify-between">
 
-<!-- Background Blobs -->
-<div class="blob-purple top-[-20%] left-[-10%]"></div>
-<div class="blob-blue top-[10%] right-[-10%]"></div>
+    <!-- Background Blobs -->
+    <div class="blob-purple top-[-20%] left-[-10%]"></div>
+    <div class="blob-blue top-[10%] right-[-10%]"></div>
 
-<!-- BEGIN: Header -->
-<div class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/75 border-b border-gray-200/50 transition-all duration-300">
-    <header class="container mx-auto px-6 py-4 flex items-center justify-between relative reveal-on-scroll">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-white font-bold text-xl">
-                E
+    <!-- BEGIN: Header -->
+    <div
+        class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/75 border-b border-gray-200/50 transition-all duration-300">
+        <header class="container mx-auto px-6 py-4 flex items-center justify-between relative reveal-on-scroll">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <img src="assets/brand/logo.svg" alt="Enlightlead Logo" class="w-8 h-8 rounded-lg object-contain">
+                <span class="text-xl font-bold tracking-tight">Enlightlead</span>
+            </a>
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a class="hover:text-[#03688d] transition-colors hover:scale-105" href="index.html">Home</a>
+                <a class="hover:text-[#03688d] transition-colors hover:scale-105"
+                    href="index.html#features">Features</a>
+                <a class="hover:text-[#03688d] transition-colors hover:scale-105" href="index.html#courses">Courses</a>
+                <a class="hover:text-[#03688d] transition-colors hover:scale-105" href="index.html#mentors">Mentors</a>
+                <a class="hover:text-[#03688d] transition-colors hover:scale-105"
+                    href="index.html#contact-us">Contact</a>
+            </nav>
+            <!-- CTA Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a class="text-sm font-medium text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:opacity-90 transition-opacity flex items-center gap-2 shadow-lg shadow-amber-500/30 btn-hover-glow-yellow"
+                    href="index.html#contact-us">
+                    Book a Demo
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </a>
             </div>
-            <span class="text-xl font-bold tracking-tight">Enlightlead</span>
-        </a>
-        <!-- Navigation -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a class="hover:text-purple-600 transition-colors hover:scale-105" href="index.html#hero">Home</a>
-            <a class="hover:text-purple-600 transition-colors hover:scale-105" href="index.html#features">Features</a>
-            <a class="hover:text-purple-600 transition-colors hover:scale-105" href="index.html#courses">Courses</a>
-            <a class="hover:text-purple-600 transition-colors hover:scale-105" href="index.html#mentors">Mentors</a>
-            <a class="hover:text-purple-600 transition-colors hover:scale-105" href="index.html#contact-us">Contact</a>
-        </nav>
-        <!-- CTA Buttons -->
-        <div class="hidden md:flex items-center gap-4">
-            <a class="text-sm font-medium text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:opacity-90 transition-opacity flex items-center gap-2 shadow-lg shadow-purple-500/30 btn-hover-glow" href="index.html#contact-us">
-                Book a Demo
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button"
+                class="block md:hidden text-gray-600 hover:text-[#03688d] focus:outline-none transition-colors"
+                aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="hamburger-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-            </a>
-        </div>
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="block md:hidden text-gray-600 hover:text-purple-600 focus:outline-none transition-colors" aria-label="Toggle navigation">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path id="hamburger-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </header>
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 border-b border-gray-200/50 bg-white/95 backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-xl z-50">
-        <nav class="flex flex-col gap-4 text-sm font-medium text-gray-600 mb-6">
-            <a class="hover:text-purple-600 transition-colors" href="index.html#hero">Home</a>
-            <a class="hover:text-purple-600 transition-colors" href="index.html#features">Features</a>
-            <a class="hover:text-purple-600 transition-colors" href="index.html#courses">Courses</a>
-            <a class="hover:text-purple-600 transition-colors" href="index.html#mentors">Mentors</a>
-            <a class="hover:text-purple-600 transition-colors" href="index.html#contact-us">Contact</a>
-        </nav>
-        <div class="flex flex-col gap-4">
-            <a class="text-sm font-medium text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-purple-500/30 btn-hover-glow" href="index.html#contact-us">
-                Book a Demo
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-            </a>
+            </button>
+        </header>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 right-0 border-b border-gray-200/50 bg-white/95 backdrop-blur-md px-6 py-4 transition-all duration-300 shadow-xl z-50">
+            <nav class="flex flex-col gap-4 text-sm font-medium text-gray-600 mb-6">
+                <a class="hover:text-[#03688d] transition-colors" href="index.html">Home</a>
+                <a class="hover:text-[#03688d] transition-colors" href="index.html#features">Features</a>
+                <a class="hover:text-[#03688d] transition-colors" href="index.html#courses">Courses</a>
+                <a class="hover:text-[#03688d] transition-colors" href="index.html#mentors">Mentors</a>
+                <a class="hover:text-[#03688d] transition-colors" href="index.html#contact-us">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-4">
+                <a class="text-sm font-medium text-white px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-amber-500/30 btn-hover-glow-yellow"
+                    href="index.html#contact-us">
+                    Book a Demo
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<!-- END: Header -->
+    <!-- END: Header -->
 
     <!-- Main Content Page -->
     <main class="container mx-auto px-6 py-12 md:py-20 relative z-10 max-w-4xl flex-grow">
         <!-- Page Title Header -->
         <div class="text-center mb-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold tracking-wide uppercase mb-4 border border-purple-100">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#f0faff] text-[#03688d] text-xs font-bold tracking-wide uppercase mb-4 border border-[#c5eaf8]">
                 DATA PROTECTION & GOVERNANCE
             </div>
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Privacy Policy</h1>
-            <p class="text-gray-500 text-sm md:text-base">Effective Date: April 5, 2026 • Last Updated: April 5, 2026</p>
+            <p class="text-gray-500 text-sm md:text-base">Effective Date: August 15, 2026 • Last Updated: August 15,
+                2026</p>
         </div>
 
         <!-- Privacy Policy Glass Container -->
-        <div class="glass-card bg-white/70 backdrop-blur-2xl p-8 md:p-12 rounded-3xl border border-white/60 shadow-xl space-y-8 text-gray-600 leading-relaxed text-sm md:text-base">
+        <div
+            class="glass-card bg-white/70 backdrop-blur-2xl p-8 md:p-12 rounded-3xl border border-white/60 shadow-xl space-y-8 text-gray-600 leading-relaxed text-sm md:text-base">
 
             <!-- Introduction -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Introduction
                 </h2>
-                <p>Enlightlead ("we", "us", "our") provides SAP training, hands-on labs, and placement support. This Privacy Policy explains what personal information we collect, how we use and protect it, and the choices available to you.</p>
+                <p>Enlightlead ("we", "us", "our") provides SAP training, hands-on labs, and placement support. This
+                    Privacy Policy explains what personal information we collect, how we use and protect it, and the
+                    choices available to you.</p>
             </section>
 
             <!-- Information We Collect -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Information We Collect
                 </h2>
-                <p class="mb-4">We collect information you provide directly, information collected automatically, and information from third parties. This may include:</p>
+                <p class="mb-4">We collect information you provide directly, information collected automatically, and
+                    information from third parties. This may include:</p>
                 <ul class="space-y-3 pl-2">
                     <li class="flex items-start gap-3">
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-bold text-xs shrink-0 mt-0.5">•</span>
-                        <div><strong class="text-gray-900">Account & Profile:</strong> Name, email, phone, profile photo, education and employment history, CV/resume.</div>
+                        <span
+                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#e8f6fc] text-[#03688d] font-bold text-xs shrink-0 mt-0.5">•</span>
+                        <div><strong class="text-gray-900">Account & Profile:</strong> Name, email, phone, profile
+                            photo, education and employment history, CV/resume.</div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-bold text-xs shrink-0 mt-0.5">•</span>
-                        <div><strong class="text-gray-900">Transaction & Billing:</strong> Payment details, invoices, billing address (handled via secure payment processors).</div>
+                        <span
+                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#e8f6fc] text-[#03688d] font-bold text-xs shrink-0 mt-0.5">•</span>
+                        <div><strong class="text-gray-900">Transaction & Billing:</strong> Payment details, invoices,
+                            billing address (handled via secure payment processors).</div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-bold text-xs shrink-0 mt-0.5">•</span>
-                        <div><strong class="text-gray-900">Learning Data:</strong> Enrollment records, course progress, assignments, lab usage, certifications.</div>
+                        <span
+                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#e8f6fc] text-[#03688d] font-bold text-xs shrink-0 mt-0.5">•</span>
+                        <div><strong class="text-gray-900">Learning Data:</strong> Enrollment records, course progress,
+                            assignments, lab usage, certifications.</div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-bold text-xs shrink-0 mt-0.5">•</span>
-                        <div><strong class="text-gray-900">Communications:</strong> Messages, support requests, and survey responses.</div>
+                        <span
+                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#e8f6fc] text-[#03688d] font-bold text-xs shrink-0 mt-0.5">•</span>
+                        <div><strong class="text-gray-900">Communications:</strong> Messages, support requests, and
+                            survey responses.</div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-700 font-bold text-xs shrink-0 mt-0.5">•</span>
-                        <div><strong class="text-gray-900">Technical:</strong> IP address, device/browser identifiers, cookies, analytics and usage metrics.</div>
+                        <span
+                            class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#e8f6fc] text-[#03688d] font-bold text-xs shrink-0 mt-0.5">•</span>
+                        <div><strong class="text-gray-900">Technical:</strong> IP address, device/browser identifiers,
+                            cookies, analytics and usage metrics.</div>
                     </li>
                 </ul>
             </section>
@@ -127,13 +158,14 @@
             <!-- How We Use Your Information -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     How We Use Your Information
                 </h2>
                 <ul class="list-disc pl-6 space-y-2">
                     <li>Provide, maintain and improve our services, course delivery, and labs.</li>
                     <li>Process payments, refunds, and manage billing.</li>
-                    <li>Match and share candidate profiles with employers for placement, with your consent when required.</li>
+                    <li>Match and share candidate profiles with employers for placement, with your consent when
+                        required.</li>
                     <li>Communicate updates, administrative notices, and (with consent) marketing communications.</li>
                     <li>Analyze usage to improve platform performance and learning outcomes.</li>
                     <li>Detect, investigate and prevent fraudulent or illegal activity and enforce our terms.</li>
@@ -143,98 +175,120 @@
             <!-- Legal Basis -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Legal Basis
                 </h2>
-                <p>Where applicable, our legal basis for processing includes performance of a contract, compliance with legal obligations, our legitimate interests (e.g., platform improvement and fraud prevention), and consent for certain marketing activities.</p>
+                <p>Where applicable, our legal basis for processing includes performance of a contract, compliance with
+                    legal obligations, our legitimate interests (e.g., platform improvement and fraud prevention), and
+                    consent for certain marketing activities.</p>
             </section>
 
             <!-- Cookies & Tracking -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Cookies & Tracking
                 </h2>
-                <p>We use cookies and similar technologies to operate the site, remember preferences, and collect analytics. You can control cookies via your browser settings, but disabling cookies may affect functionality.</p>
+                <p>We use cookies and similar technologies to operate the site, remember preferences, and collect
+                    analytics. You can control cookies via your browser settings, but disabling cookies may affect
+                    functionality.</p>
             </section>
 
             <!-- Data Sharing -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Data Sharing
                 </h2>
                 <p class="mb-3">We may share data with:</p>
                 <ul class="list-disc pl-6 space-y-2">
-                    <li><strong class="text-gray-900">Service providers:</strong> Payment processors, hosting providers, analytics and email services, under strict confidentiality agreements.</li>
-                    <li><strong class="text-gray-900">Employers & placement partners:</strong> With your consent, for job matching and recruitment.</li>
-                    <li><strong class="text-gray-900">Legal & safety:</strong> When required by law or to protect rights and safety.</li>
+                    <li><strong class="text-gray-900">Service providers:</strong> Payment processors, hosting providers,
+                        analytics and email services, under strict confidentiality agreements.</li>
+                    <li><strong class="text-gray-900">Employers & placement partners:</strong> With your consent, for
+                        job matching and recruitment.</li>
+                    <li><strong class="text-gray-900">Legal & safety:</strong> When required by law or to protect rights
+                        and safety.</li>
                 </ul>
             </section>
 
             <!-- Data Security & Retention -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Data Security & Retention
                 </h2>
-                <p>We implement administrative, technical and physical safeguards (encryption in transit, access controls, secure hosting). We retain personal data only as long as necessary to provide services, meet legal obligations, and for legitimate business purposes. You can request deletion where permitted by law; some records (e.g., financial) may be retained for compliance.</p>
+                <p>We implement administrative, technical and physical safeguards (encryption in transit, access
+                    controls, secure hosting). We retain personal data only as long as necessary to provide services,
+                    meet legal obligations, and for legitimate business purposes. You can request deletion where
+                    permitted by law; some records (e.g., financial) may be retained for compliance.</p>
             </section>
 
             <!-- Your Rights -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Your Rights
                 </h2>
-                <p>Depending on your jurisdiction, you may have rights to access, correct, delete, or port your personal data, and to object to or restrict processing. To exercise these rights, contact us (details below). We may require verification before fulfilling requests.</p>
+                <p>Depending on your jurisdiction, you may have rights to access, correct, delete, or port your personal
+                    data, and to object to or restrict processing. To exercise these rights, contact us (details below).
+                    We may require verification before fulfilling requests.</p>
             </section>
 
             <!-- Children -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Children
                 </h2>
-                <p>Our services are intended for adult learners and professionals. We do not knowingly collect personal data from children under 16 without parental consent. If you believe we have collected data from a child in violation of this policy, contact us to request removal.</p>
+                <p>Our services are intended for adult learners and professionals. We do not knowingly collect personal
+                    data from children under 16 without parental consent. If you believe we have collected data from a
+                    child in violation of this policy, contact us to request removal.</p>
             </section>
 
             <!-- International Transfers -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     International Transfers
                 </h2>
-                <p>We operate globally and may transfer data to service providers or servers located outside your country. We use appropriate safeguards (e.g., standard contractual clauses) as required by law.</p>
+                <p>We operate globally and may transfer data to service providers or servers located outside your
+                    country. We use appropriate safeguards (e.g., standard contractual clauses) as required by law.</p>
             </section>
 
             <!-- Third-Party Links -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Third-Party Links
                 </h2>
-                <p>Our site may contain links to third-party sites and services with separate privacy practices. We are not responsible for their content or practices and recommend reviewing their policies.</p>
+                <p>Our site may contain links to third-party sites and services with separate privacy practices. We are
+                    not responsible for their content or practices and recommend reviewing their policies.</p>
             </section>
 
             <!-- Changes to This Policy -->
             <section>
                 <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-purple-600"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#03688d]"></span>
                     Changes to This Policy
                 </h2>
-                <p>We may update this policy from time to time. Material changes will be posted with an updated effective date and, where appropriate, notified to users.</p>
+                <p>We may update this policy from time to time. Material changes will be posted with an updated
+                    effective date and, where appropriate, notified to users.</p>
             </section>
 
             <!-- Contact Card -->
-            <section class="bg-purple-50/80 p-6 md:p-8 rounded-2xl border border-purple-100">
+            <section class="bg-[#f0faff]/80 p-6 md:p-8 rounded-2xl border border-[#c5eaf8]">
                 <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <svg class="w-5 h-5 text-[#03688d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
                     Contact Data Controller
                 </h2>
                 <div class="space-y-2 text-sm text-gray-700">
                     <p><strong class="text-gray-900">Data Controller:</strong> Enlightlead</p>
-                    <p><strong class="text-gray-900">Email:</strong> <a href="mailto:support@enlightlead.in" class="text-purple-600 font-semibold hover:underline">support@enlightlead.in</a></p>
+                    <p><strong class="text-gray-900">Email:</strong> <a href="mailto:support@enlightlead.in"
+                            class="text-[#03688d] font-semibold hover:underline">support@enlightlead.in</a></p>
                     <p><strong class="text-gray-900">Address:</strong> Electronic City, Bangalore</p>
                 </div>
             </section>
@@ -242,99 +296,133 @@
         </div>
     </main>
 
-<!-- BEGIN: Footer CTA & Footer -->
-<footer class="bg-[#fafafa] relative pt-12 md:pt-24 z-10">
-    <div class="container mx-auto px-6">
-        <!-- CTA Box -->
-        <div class="gradient-bg rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden mb-16 shadow-2xl shadow-purple-500/20 reveal-on-scroll">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 relative z-10 tracking-tight">Ready to start your learning <br class="hidden sm:inline">journey?</h2>
-            <p class="text-white/80 text-lg mb-10 relative z-10">Join thousands of ambitious professionals who accelerated their careers with Enlightlead.</p>
-            <div class="flex flex-wrap justify-center gap-4 relative z-10">
-                <a href="index.html#courses" class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-bold rounded-full hover:bg-gray-50 transition-colors shadow-lg shadow-amber-500/30 btn-hover-glow-yellow inline-block">Get Started Now</a>
+    <!-- BEGIN: Footer CTA & Footer -->
+    <footer class="bg-[#fafafa] relative pt-12 md:pt-24 z-10">
+        <div class="container mx-auto px-6">
+            <!-- CTA Box -->
+            <div
+                class="gradient-bg rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden mb-16 shadow-2xl shadow-[#03688d]/20 reveal-on-scroll">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2">
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 relative z-10 tracking-tight">Ready to start your
+                    learning <br class="hidden sm:inline">journey?</h2>
+                <p class="text-white/80 text-lg mb-10 relative z-10">Join thousands of ambitious professionals who
+                    accelerated their careers with Enlightlead.</p>
+                <div class="flex flex-wrap justify-center gap-4 relative z-10">
+                    <a href="index.html#courses"
+                        class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-bold rounded-full hover:bg-gray-50 transition-colors shadow-lg shadow-amber-500/30 btn-hover-glow-yellow inline-block">Get
+                        Started Now</a>
+                </div>
             </div>
-        </div>
-        <!-- Footer Links -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-16 border-b border-gray-100">
-            <div class="col-span-2 flex flex-col justify-between">
+            <!-- Footer Links -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-16 border-b border-gray-100">
+                <div class="col-span-2 flex flex-col justify-between">
+                    <div>
+                        <a href="index.html" class="flex items-center gap-2 mb-6 cursor-pointer">
+                            <img src="assets/brand/logo.svg" alt="Enlightlead Logo"
+                                class="w-8 h-8 rounded-lg object-contain">
+                            <span class="text-xl font-bold tracking-tight text-gray-900">Enlightlead</span>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 max-w-sm leading-relaxed">
+                            Making SAP education accessible to everyone through smart technology and intuitive design.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 mb-4">
+                        <!-- Social Icons -->
+                        <!-- Instagram -->
+                        <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-[#03688d] hover:scale-110 transition-all"
+                            href="https://www.instagram.com/enlight_lead" target="_blank" rel="noopener noreferrer">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-[#03688d] hover:scale-110 transition-all"
+                            href="https://wa.me/918220227915?text=Hi%20Enlightlead!%20%F0%9F%91%8B%20I'm%20interested%20in%20your%20SAP%20training%20programs.%20Please%20share%20more%20details.">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.888-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-[#03688d] hover:scale-110 transition-all"
+                            href="mailto:support@enlightlead.in">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
                 <div>
-                    <a href="index.html" class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-bold text-xl">
-                            E
-                        </div>
-                        <span class="text-xl font-bold tracking-tight text-gray-900">Enlightlead</span>
-                    </a>
-                    <p class="text-gray-500 text-sm mb-6 max-w-sm leading-relaxed">
-                        Making SAP education accessible to everyone through smart technology and intuitive design.
-                    </p>
+                    <h4 class="font-bold text-gray-900 mb-6">Product</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class=""><a class="hover:text-[#03688d] transition-colors"
+                                href="index.html#features">Features</a></li>
+                        <li class=""><a class="hover:text-[#03688d] transition-colors"
+                                href="index.html#courses">Courses</a></li>
+                        <li class=""><a class="hover:text-[#03688d] transition-colors"
+                                href="index.html#mentors">Mentors</a></li>
+                    </ul>
                 </div>
-                <div class="flex gap-4 mb-4">
-                    <!-- Social Icons -->
-                    <!-- Instagram -->`n                    <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-purple-600 hover:scale-110 transition-all" href="https://www.instagram.com/enlight_lead" target="_blank" rel="noopener noreferrer">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-                    </a>
-                    <!-- WhatsApp -->
-                    <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-purple-600 hover:scale-110 transition-all" href="https://wa.me/918220227915?text=Hi%20Enlightlead!%20%F0%9F%91%8B%20I'm%20interested%20in%20your%20SAP%20training%20programs.%20Please%20share%20more%20details.">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.888-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    </a>
-                    <!-- Email -->
-                    <a class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:text-purple-600 hover:scale-110 transition-all" href="mailto:support@enlightlead.in">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
-                    </a>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class=""><a class="hover:text-[#03688d] transition-colors" href="index.html">About
+                                Us</a></li>
+                        <li class=""><a class="hover:text-[#03688d] transition-colors"
+                                href="index.html#contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-6">Support</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li class=""><a class="hover:text-[#03688d] transition-colors" href="index.html#contact-us">Help
+                                Center</a></li>
+                        <li class=""><a class="hover:text-[#03688d] transition-colors" href="privacypolicy.html">Privacy
+                                Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6">Product</h4>
-                <ul class="space-y-4 text-sm text-gray-500">
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#features">Features</a></li>
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#courses">Courses</a></li>
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#mentors">Mentors</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6">Company</h4>
-                <ul class="space-y-4 text-sm text-gray-500">
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#hero">About Us</a></li>
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#contact-us">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-gray-900 mb-6">Support</h4>
-                <ul class="space-y-4 text-sm text-gray-500">
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="index.html#contact-us">Help Center</a></li>
-                    <li class=""><a class="hover:text-purple-600 transition-colors" href="privacypolicy.html">Privacy Policy</a></li>
-                </ul>
+            <!-- Copyright -->
+            <div class="py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p class="">© 2026 <a href="https://www.greendwarftech.com/" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-[#03688d] transition-colors underline decoration-[#86d5f8]">Green Dwarf
+                        Tech</a>. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-gray-600 transition-colors" href="privacypolicy.html">Privacy</a>
+                </div>
             </div>
         </div>
-        <!-- Copyright -->
-        <div class="py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-            <p class="">© 2026 <a href="https://www.greendwarftech.com/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition-colors underline decoration-purple-300">Green Dwarf Tech</a>. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a class="hover:text-gray-600 transition-colors" href="privacypolicy.html">Privacy</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- END: Footer CTA & Footer -->
+    </footer>
+    <!-- END: Footer CTA & Footer -->
 
-<!-- BEGIN: Animation Scripts -->
-<script src="script.js"></script>
-<!-- END: Animation Scripts -->
+    <!-- BEGIN: Animation Scripts -->
+    <script src="assets/scripts/script.js"></script>
+    <!-- END: Animation Scripts -->
 
-<!-- Floating WhatsApp Chat Button -->
-<a href="https://wa.me/918220227915?text=Hi%20Enlightlead!%20%F0%9F%91%8B%20I'm%20interested%20in%20your%20SAP%20training%20programs.%20Please%20share%20more%20details."
-   target="_blank"
-   rel="noopener noreferrer"
-   class="fixed bottom-6 right-6 z-[99] w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[#25D366]/40 active:scale-95 group focus:outline-none"
-   aria-label="Chat on WhatsApp">
-    <!-- Pulsing glow ring -->
-    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping group-hover:opacity-0 transition-opacity"></span>
-    <!-- WhatsApp Icon SVG -->
-    <svg class="w-7 h-7 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-    </svg>
-</a>
+    <!-- Floating WhatsApp Chat Button -->
+    <a href="https://wa.me/918220227915?text=Hi%20Enlightlead!%20%F0%9F%91%8B%20I'm%20interested%20in%20your%20SAP%20training%20programs.%20Please%20share%20more%20details."
+        target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-[99] w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[#25D366]/40 active:scale-95 group focus:outline-none"
+        aria-label="Chat on WhatsApp">
+        <!-- Pulsing glow ring -->
+        <span
+            class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping group-hover:opacity-0 transition-opacity"></span>
+        <!-- WhatsApp Icon SVG -->
+        <svg class="w-7 h-7 relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+            </path>
+        </svg>
+    </a>
 
 </body>
+
 </html>

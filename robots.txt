@@ -1,6 +1,29 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://www.enlightlead.in/sitemap.xml
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Google AI systems
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft AI
+User-agent: Bingbot
+Allow: /
+
+# Common search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+# Sitemap
+Sitemap: https://enlightlead.in/sitemap.xml

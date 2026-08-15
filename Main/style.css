@@ -25,13 +25,13 @@ img, svg, video, iframe, canvas {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 30px 60px -15px rgba(76, 29, 149, 0.1);
+    box-shadow: 0 30px 60px -15px rgba(3, 104, 141, 0.1);
 }
 .gradient-bg {
-    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    background: linear-gradient(135deg, #03688d 0%, #86d5f8 100%);
 }
 .text-gradient {
-    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    background: linear-gradient(135deg, #03688d 0%, #86d5f8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -42,7 +42,7 @@ img, svg, video, iframe, canvas {
     position: absolute;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(250,250,250,0) 70%);
+    background: radial-gradient(circle, rgba(3,104,141,0.12) 0%, rgba(250,250,250,0) 70%);
     z-index: -1;
     pointer-events: none;
     animation: float-blob-1 25s infinite ease-in-out alternate;
@@ -51,7 +51,7 @@ img, svg, video, iframe, canvas {
     position: absolute;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(250,250,250,0) 70%);
+    background: radial-gradient(circle, rgba(134,213,248,0.18) 0%, rgba(250,250,250,0) 70%);
     z-index: -1;
     pointer-events: none;
     animation: float-blob-2 20s infinite ease-in-out alternate;
@@ -60,7 +60,7 @@ img, svg, video, iframe, canvas {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(76,29,149,0.08) 0%, rgba(250,250,250,0) 60%);
+    background: radial-gradient(circle, rgba(3,104,141,0.08) 0%, rgba(250,250,250,0) 60%);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     z-index: -1;
     pointer-events: none;
@@ -71,7 +71,7 @@ img, svg, video, iframe, canvas {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, rgba(250,250,250,0) 60%);
+    background: radial-gradient(circle, rgba(134,213,248,0.12) 0%, rgba(250,250,250,0) 60%);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     z-index: -1;
     pointer-events: none;
@@ -157,7 +157,7 @@ img, svg, video, iframe, canvas {
 .typewriter-cursor::after {
     content: '|';
     animation: blink-caret 0.75s step-end infinite;
-    color: #a855f7;
+    color: #03688d;
     margin-left: 2px;
 }
 @keyframes blink-caret {
@@ -177,7 +177,7 @@ img, svg, video, iframe, canvas {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(168, 85, 247, 0.08), transparent 45%);
+    background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(3, 104, 141, 0.08), transparent 45%);
     z-index: 1;
     pointer-events: none;
     opacity: 0;
@@ -193,7 +193,7 @@ img, svg, video, iframe, canvas {
 }
 .btn-hover-glow:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px -5px rgba(168, 85, 247, 0.35), 0 10px 15px -7px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 15px 30px -5px rgba(3, 104, 141, 0.35), 0 10px 15px -7px rgba(134, 213, 248, 0.25);
 }
 
 /* FAQ Accordion Details */

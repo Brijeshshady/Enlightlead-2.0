@@ -226,7 +226,7 @@ function switchCareerTab(tabKey) {
         const btn = buttons[key];
         if (btn) {
             if (key === tabKey) {
-                btn.className = "flex-1 py-2 px-2 sm:px-4 rounded-xl text-xs font-bold transition-all duration-300 shadow-sm bg-white text-purple-700";
+                btn.className = "flex-1 py-2 px-2 sm:px-4 rounded-xl text-xs font-bold transition-all duration-300 shadow-sm bg-white text-[#024d69]";
             } else {
                 btn.className = "flex-1 py-2 px-2 sm:px-4 rounded-xl text-xs font-bold transition-all duration-300 text-gray-500 hover:text-gray-900";
             }
@@ -340,6 +340,41 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnFico) btnFico.addEventListener('click', () => switchCareerTab('fico'));
     if (btnMm) btnMm.addEventListener('click', () => switchCareerTab('mm'));
     if (btnSd) btnSd.addEventListener('click', () => switchCareerTab('sd'));
+
+    // =============================================
+    // PHONE NUMBER VALIDATION
+    // =============================================
+    function isDummyPhoneNumber(phone) {
+        if (!phone) return false;
+        // Must be exactly 10 digits
+        if (!/^\d{10}$/.test(phone)) return true;
+        // Indian numbers must start with 6, 7, 8, or 9
+        if (!/^[6-9]/.test(phone)) return true;
+        // Check for common sequential numbers
+        const sequential = ['0123456789', '1234567890', '9876543210'];
+        if (sequential.includes(phone)) return true;
+        // Check for 10 repeating digits (e.g., 0000000000)
+        if (/^(\d)\1{9}$/.test(phone)) return true;
+        return false;
+    }
+
+    function attachPhoneValidation(inputId) {
+        const input = document.getElementById(inputId);
+        if (!input) return;
+        input.addEventListener('input', () => {
+            const val = input.value.replace(/\D/g, ''); // strip non-digits if any
+            if (val.length === 10 && isDummyPhoneNumber(val)) {
+                input.setCustomValidity('Please enter a valid real mobile number.');
+            } else if (val.length > 0 && !/^[6-9]/.test(val)) {
+                input.setCustomValidity('Number must start with 6, 7, 8, or 9.');
+            } else {
+                input.setCustomValidity('');
+            }
+        });
+    }
+
+    attachPhoneValidation('enroll-phone');
+    attachPhoneValidation('contact-phone');
 
     // =============================================
     // ENROLLMENT FORM → WHATSAPP REDIRECT
@@ -508,11 +543,11 @@ document.addEventListener('DOMContentLoaded', () => {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-purple-600', 'text-white', 'shadow-md', 'shadow-purple-500/20');
-                    b.classList.add('bg-white/70', 'text-gray-600', 'border', 'border-gray-200');
+                    b.classList.remove('active', 'bg-[#03688d]', 'text-white', 'shadow-md', 'shadow-[#03688d]/20');
+                    b.classList.add('bg-white/70', 'text-gray-600', 'border', 'border-gray-200', 'hover:text-[#03688d]');
                 });
-                btn.classList.add('active', 'bg-purple-600', 'text-white', 'shadow-md', 'shadow-purple-500/20');
-                btn.classList.remove('bg-white/70', 'text-gray-600', 'border', 'border-gray-200');
+                btn.classList.add('active', 'bg-[#03688d]', 'text-white', 'shadow-md', 'shadow-[#03688d]/20');
+                btn.classList.remove('bg-white/70', 'text-gray-600', 'border', 'border-gray-200', 'hover:text-[#03688d]');
 
                 const filter = btn.getAttribute('data-filter');
                 const cards = reviewTrack.querySelectorAll('.review-card');
@@ -567,12 +602,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (selectLabel) selectLabel.textContent = labelText;
 
                 selectOptions.forEach(o => {
-                    o.classList.remove('bg-purple-50', 'text-purple-700');
+                    o.classList.remove('bg-[#f0faff]', 'text-[#024d69]');
                     const check = o.querySelector('.check-icon');
                     if (check) check.classList.add('hidden');
                 });
 
-                opt.classList.add('bg-purple-50', 'text-purple-700');
+                opt.classList.add('bg-[#f0faff]', 'text-[#024d69]');
                 const activeCheck = opt.querySelector('.check-icon');
                 if (activeCheck) activeCheck.classList.remove('hidden');
 
@@ -587,3 +622,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function popupCourseCard(cardId) {
+    const card = document.getElementById(cardId);
+    if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Add visual popup effect
+        card.classList.add('scale-[1.03]', 'ring-4', 'ring-[#03688d]/50', 'z-50');
+        setTimeout(() => {
+            card.classList.remove('scale-[1.03]', 'ring-4', 'ring-[#03688d]/50', 'z-50');
+        }, 1500);
+    }
+}
